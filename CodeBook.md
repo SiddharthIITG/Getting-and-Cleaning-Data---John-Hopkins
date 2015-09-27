@@ -13,6 +13,7 @@ This file describes the variables, the data, and any transformations or work tha
   * Name the columns of *activity_names* as "activity_labels" and "activity".
   * Name the columns of *merged_data*, making them equal to the value of the first column of features. 
   * Create a 10299x66 data frame *merged_mean_std* by subsetting the *merged_data* data frame to variables which are either mean or standard deviation values using grepl.
+  * Clean the column names of the data frame *merged_mean_std*. We remove the "()" and "-" symbols in the names, as well as make the first letter of "mean" and "std" a capital letter "M" and "S" respectively.
   * Create a 10299x68 data frame *subset_data* which includes subject labels, 66 mean and standard deviation variables and activity labels.
   * Create a 10299x69 data frame *merged_activity_data* by merging *subset_data* and *activity_names* by the activity_labels column.
   * Group the data frame *merged_activity_data* by subject_label and activity_labels using group_by function of dplyr package.
